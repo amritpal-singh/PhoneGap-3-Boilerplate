@@ -75,5 +75,16 @@
         <script type="text/javascript" src="js/cordova-mediaplayer/cordova-mediaplayer.js"></script>
         <script type="text/javascript" src="js/tests.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script>
+            // Wait for device API libraries to load
+            //
+            document.addEventListener("deviceready", onDeviceReady, false);
+
+            // device APIs are available
+            //
+            function onDeviceReady() {
+                navigator.splashscreen.show();
+            }
+        </script>
     </body>
 </html>
